@@ -9,6 +9,7 @@ urlpatterns = [
     
     path('',views.ProductView.as_view(),name="home"),
     path('addproduct',views.AddProductView.as_view(),name="addproduct"),
+    #path('addproduct',views.addproduct,name="addproduct"),
 
      # this Authentication Form 
     
@@ -43,7 +44,6 @@ urlpatterns = [
     path('checkout/', views.checkout, name='checkout'),
     path('paymentdone/', views.payment_done, name='paymentdone'),
     path('usermanagement/', views.user_management, name='user_management'),
-
 
 
 ]

@@ -1,6 +1,8 @@
+#from typing_extensions import Required
 from django import forms
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm,UsernameField,PasswordChangeForm,PasswordResetForm,SetPasswordForm
 from django.contrib.auth.models import User
+from django.db.models.enums import Choices
 from django.forms import fields
 from django.utils.translation import gettext,gettext_lazy as _
 from django.contrib.auth import password_validation
@@ -42,7 +44,16 @@ class CustomerProfileForm(forms.ModelForm):
 	class Meta:
 		model=Customer
 		fields=['name','locality','city','state','zipcode']
+
 class AddProductForm(forms.ModelForm):
+	# title = forms.CharField(required=True)
+	# selling_price=forms.FloatField(required=True)
+	# discount_price=forms.FloatField(required=True)
+	# description=forms.Textarea()
+	# brand=forms.CharField(required=True)
+	# category=forms.CharField(required=True)
+	# product_image=forms.ImageField(required=True)
+
 	class Meta:
 		model=Product
 		fields=['title','selling_price','discount_price','description','brand','category','product_image']

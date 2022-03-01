@@ -1,0 +1,8 @@
+venv/
+media/
+media_cdn/
+__pycache__/
+migrations/
+accounts.log
+.vscode/
+.env/
